@@ -1,0 +1,107 @@
+html, body {
+    background-color: lightgrey;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+}
+
+#kontener {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#alternatywki {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: row;
+}
+
+#klikanie {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin: -50px;
+    flex-direction: column;
+    color: darkviolet;
+}
+
+#ilosc {
+    display: flex;
+    width: 100%;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 40px;
+    color: lightcoral;
+
+}
+
+#posiadane {
+    display: flex;
+    width: 100%;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 40px;
+    color: lightcoral;
+
+}
+
+#ehe {
+    margin-top: 10px;
+    border: solid 0px;
+    background-color: transparent;
+
+}
+
+#ehe1 {
+    display: flex;
+    justify-content: center;
+    border: solid 0px;
+    background-color: transparent;
+}
+
+#sklep {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 350px;
+}
+
+img:active {
+    width: 250px;
+    height: 250px;
+}
+
+.obrazeczki {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin-top: -40px;
+}
+
+#napis {
+    background-color: lightcoral;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin-bottom: -300px;
+    margin-top: 200px;
+}
+
+.napis {
+    color: darkviolet;
+    font-size: 20px;
+}
+
+
+
