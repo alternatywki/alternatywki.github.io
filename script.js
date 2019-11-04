@@ -76,6 +76,7 @@ function zapisPosiadane() {
   posiadane_alternatywki = parseInt(
     localStorage.getItem("posiadane_alternatywki_zapis")
   );
+
   document.getElementById("posiadane").innerHTML =
     "Posiadane alternatywki: " + posiadane_alternatywki;
 }
@@ -84,6 +85,7 @@ function zapisIlosc() {
   ilosc_na_klikniecie = parseInt(
     localStorage.getItem("ilosc_na_klikniecie_zapis")
   );
+
   document.getElementById("ilosc").innerHTML =
     "Ilość alternatywek na kliknięcie: " + ilosc_na_klikniecie;
 }
@@ -115,5 +117,14 @@ function wyczyscIlosc() {
   );
 }
 
-zapisPosiadane();
-zapisIlosc();
+if (localStorage.key("posiadane_alternatywki_zapis") < 0) {
+  wyczysc();
+} else {
+  zapisPosiadane();
+}
+
+if (localStorage.key("ilosc_na_klikniecie_zapis") < 1) {
+  wyczysc();
+} else {
+  zapisIlosc();
+}
