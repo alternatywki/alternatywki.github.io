@@ -1,110 +1,107 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+html, body {
+    background-color: lightgrey;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
 }
 
-body {
-  background-color: darkorchid;
-  color: aliceblue;
+#kontener {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
 }
 
-#container {
-  background-color: darkslateblue;
-  width: 50vw;
-  height: 75vh;
-  position: absolute;
-  top: calc(25% / 2);
-  left: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 10px;
+#alternatywki {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: row;
 }
 
-.login-field,
-.password-field,
-.email-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#klikanie {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin: -50px;
+    flex-direction: column;
+    color: darkviolet;
 }
 
-input {
-  border-color: transparent;
-  background-color: transparent;
-  outline: none;
-  color: white;
+#ilosc {
+    display: flex;
+    width: 100%;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 40px;
+    color: lightcoral;
+
 }
 
-.login-field::after {
-  position: absolute;
-  width: 38.5%;
-  top: 20%;
-  left: 31.5%;
-  content: "";
-  border-top: 1px solid white;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+#posiadane {
+    display: flex;
+    width: 100%;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 40px;
+    color: lightcoral;
+
 }
 
-.password-field::after {
-  position: absolute;
-  width: 38.5%;
-  top: 87%;
-  left: 31.5%;
-  content: "";
-  border-bottom: 1px solid white;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+#ehe {
+    margin-top: 10px;
+    border: solid 0px;
+    background-color: transparent;
+
 }
 
-.email-field::after {
-  position: absolute;
-  width: 38.5%;
-  top: 52.9%;
-  left: 31.5%;
-  content: "";
-  border-bottom: 1px solid white;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+#ehe1 {
+    display: flex;
+    justify-content: center;
+    border: solid 0px;
+    background-color: transparent;
 }
 
-.login-field:focus-within::after,
-.password-field:focus-within::after,
-.email-field:focus-within::after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  transition: 250ms ease-in;
+#sklep {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 350px;
 }
 
-input::-webkit-input-placeholder {
-  color: white;
+img:active {
+    width: 250px;
+    height: 250px;
 }
 
-input:-ms-input-placeholder {
-  color: white;
+.obrazeczki {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin-top: -40px;
 }
 
-input::-ms-input-placeholder {
-  color: white;
+#napis {
+    background-color: lightcoral;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin-bottom: -300px;
+    margin-top: 200px;
 }
 
-input::placeholder {
-  color: white;
+.napis {
+    color: darkviolet;
+    font-size: 20px;
 }
 
-i {
-  padding: 10px;
-}
-/*# sourceMappingURL=style.css.map */
+
+
