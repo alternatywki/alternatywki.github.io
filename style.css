@@ -1,0 +1,153 @@
+* {
+  outline: none;
+  opacity: 10;
+}
+
+html,
+body {
+  background: url("siema.gif") no-repeat;
+  background-size: cover;
+  font-family: "Noto Serif", serif;
+  margin: 0;
+  padding: 0;
+}
+
+#kontener {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+#alternatywki {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  flex-direction: row;
+}
+
+#klikanie {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -50px;
+  flex-direction: column;
+  color: darkviolet;
+}
+
+#ilosc {
+  display: flex;
+  width: 100%;
+  font-size: 35px;
+  justify-content: center;
+  margin-top: 40px;
+  color: darkviolet;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#posiadane {
+  display: flex;
+  width: 100%;
+  font-size: 35px;
+  justify-content: center;
+  margin-top: 40px;
+  color: darkviolet;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#ehe {
+  margin-top: 10px;
+  border: solid 0px;
+  background-color: transparent;
+}
+
+#ehe1 {
+  display: flex;
+  justify-content: center;
+  border: solid 0px;
+  background-color: transparent;
+}
+
+#sklep {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 350px;
+}
+
+img:active {
+  transform: scale(1.1);
+}
+
+.obrazeczki {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin-top: -40px;
+  z-index: 10;
+}
+
+#napis {
+  background-color: transparent;
+  border-top: 10px solid darkviolet;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  margin-bottom: -300px;
+  margin-top: 200px;
+  z-index: 10;
+  font-size: 40px;
+}
+
+.napis {
+  color: darkviolet;
+  font-size: 20px;
+  font-weight: 1000;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#skip {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: calc(50% - 50px);
+  top: 20px;
+  border-radius: 20px;
+  border: 1px solid darkviolet;
+  background-color: rgb(203, 218, 230);
+}
+
+i {
+  font-size: 30px;
+  color: darkviolet;
+}
+
+.klikaj {
+  font-size: 20px;
+  font-weight: 1000;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+img {
+  box-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 500px);
+  top: 500px;
+  left: 0;
+  background: rgba(148, 0, 211, 0.5);
+  z-index: 1;
+}
