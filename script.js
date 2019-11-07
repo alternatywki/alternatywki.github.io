@@ -68,7 +68,7 @@ function sklep2() {
   if (posiadane_alternatywki >= klik2koszt) {
     posiadane_alternatywki = posiadane_alternatywki - klik2koszt;
     ilosc_na_klikniecie = klik2daje + ilosc_na_klikniecie;
-    klik2koszt = Math.floor(klik1koszt * 1.15);
+    klik2koszt = Math.floor(klik2koszt * 1.15);
     document.getElementById("posiadane").innerHTML =
       "Posiadane alternatywki:" + "" + posiadane_alternatywki;
     document.getElementById("ilosc").innerHTML =
