@@ -1,6 +1,17 @@
 let ilosc_na_klikniecie = 1;
 let posiadane_alternatywki = 0;
 var dzwiek = document.getElementById("elo");
+var klik1koszt = 100;
+var klik1daje = 1;
+
+var klik2koszt = 1100;
+var klik2daje = 8;
+
+var klik3koszt = 12000;
+var klik3daje = 60;
+
+var klik4koszt = 560000;
+var klik4daje = 520;
 
 function farma() {
   posiadane_alternatywki = posiadane_alternatywki + ilosc_na_klikniecie;
@@ -9,10 +20,35 @@ function farma() {
   localStorage.setItem("posiadane_alternatywki_zapis", posiadane_alternatywki);
 }
 
+function zapisz1() {
+  klik1koszt = parseInt(localStorage.getItem("klik1_zapis"));
+  document.getElementById("wtf1").innerHTML =
+    "Kosztuje " + klik1koszt + " alternatywek";
+}
+
+function zapisz2() {
+  klik2koszt = parseInt(localStorage.getItem("klik2_zapis"));
+  document.getElementById("wtf2").innerHTML =
+    "Kosztuje " + klik2koszt + " alternatywek";
+}
+
+function zapisz3() {
+  klik3koszt = parseInt(localStorage.getItem("klik3_zapis"));
+  document.getElementById("wtf3").innerHTML =
+    "Kosztuje " + klik3koszt + " alternatywek";
+}
+
+function zapisz4() {
+  klik4koszt = parseInt(localStorage.getItem("klik4_zapis"));
+  document.getElementById("wtf4").innerHTML =
+    "Kosztuje " + klik4koszt + " alternatywek";
+}
+
 function sklep1() {
-  if (posiadane_alternatywki >= 100) {
-    posiadane_alternatywki = posiadane_alternatywki - 100;
-    ilosc_na_klikniecie = 1 + ilosc_na_klikniecie;
+  if (posiadane_alternatywki >= klik1koszt) {
+    posiadane_alternatywki = posiadane_alternatywki - klik1koszt;
+    ilosc_na_klikniecie = klik1daje + ilosc_na_klikniecie;
+    klik1koszt = Math.floor(klik1koszt * 1.15);
     document.getElementById("posiadane").innerHTML =
       "Posiadane alternatywki:" + "" + posiadane_alternatywki;
     document.getElementById("ilosc").innerHTML =
@@ -22,13 +58,17 @@ function sklep1() {
       posiadane_alternatywki
     );
     localStorage.setItem("ilosc_na_klikniecie_zapis", ilosc_na_klikniecie);
+    document.getElementById("wtf1").innerHTML =
+      "kosztuje " + klik1koszt + " alternatywek";
+    localStorage.setItem("klik1_zapis", klik1koszt);
   }
 }
 
 function sklep2() {
-  if (posiadane_alternatywki >= 1000) {
-    posiadane_alternatywki = posiadane_alternatywki - 1000;
-    ilosc_na_klikniecie = 25 + ilosc_na_klikniecie;
+  if (posiadane_alternatywki >= klik2koszt) {
+    posiadane_alternatywki = posiadane_alternatywki - klik2koszt;
+    ilosc_na_klikniecie = klik2daje + ilosc_na_klikniecie;
+    klik2koszt = Math.floor(klik1koszt * 1.15);
     document.getElementById("posiadane").innerHTML =
       "Posiadane alternatywki:" + "" + posiadane_alternatywki;
     document.getElementById("ilosc").innerHTML =
@@ -38,13 +78,17 @@ function sklep2() {
       posiadane_alternatywki
     );
     localStorage.setItem("ilosc_na_klikniecie_zapis", ilosc_na_klikniecie);
+    document.getElementById("wtf2").innerHTML =
+      "kosztuje " + klik2koszt + " alternatywek";
+    localStorage.setItem("klik2_zapis", klik2koszt);
   }
 }
 
 function sklep3() {
-  if (posiadane_alternatywki >= 10000) {
-    posiadane_alternatywki = posiadane_alternatywki - 10000;
-    ilosc_na_klikniecie = 100 + ilosc_na_klikniecie;
+  if (posiadane_alternatywki >= klik3koszt) {
+    posiadane_alternatywki = posiadane_alternatywki - klik3koszt;
+    ilosc_na_klikniecie = klik3daje + ilosc_na_klikniecie;
+    klik3koszt = Math.floor(klik3koszt * 1.15);
     document.getElementById("posiadane").innerHTML =
       "Posiadane alternatywki:" + "" + posiadane_alternatywki;
     document.getElementById("ilosc").innerHTML =
@@ -54,13 +98,17 @@ function sklep3() {
       posiadane_alternatywki
     );
     localStorage.setItem("ilosc_na_klikniecie_zapis", ilosc_na_klikniecie);
+    document.getElementById("wtf3").innerHTML =
+      "kosztuje " + klik3koszt + " alternatywek";
+    localStorage.setItem("klik3_zapis", klik3koszt);
   }
 }
 
 function sklep4() {
-  if (posiadane_alternatywki >= 100000) {
-    posiadane_alternatywki = posiadane_alternatywki - 100000;
-    ilosc_na_klikniecie = 200 + ilosc_na_klikniecie;
+  if (posiadane_alternatywki >= klik4koszt) {
+    posiadane_alternatywki = posiadane_alternatywki - klik4koszt;
+    ilosc_na_klikniecie = klik4daje + ilosc_na_klikniecie;
+    klik4koszt = Math.floor(klik4koszt * 1.15);
     document.getElementById("posiadane").innerHTML =
       "Posiadane alternatywki:" + "" + posiadane_alternatywki;
     document.getElementById("ilosc").innerHTML =
@@ -70,6 +118,9 @@ function sklep4() {
       posiadane_alternatywki
     );
     localStorage.setItem("ilosc_na_klikniecie_zapis", ilosc_na_klikniecie);
+    document.getElementById("wtf4").innerHTML =
+      "kosztuje " + klik4koszt + " alternatywek";
+    localStorage.setItem("klik4_zapis", klik4koszt);
   }
 }
 
@@ -102,8 +153,48 @@ function wyczysc() {
   document.getElementById("ilosc").innerHTML =
     "Ilość alternatywek na kliknięcie: " + ilosc_na_klikniecie;
   localStorage.setItem("ilosc_na_klikniecie_zapis", ilosc_na_klikniecie);
+  aha1();
+  aha2();
+  aha3();
+  aha4();
   wyczyscPosiadne();
   wyczyscIlosc();
+  wyczyscZapis1();
+  wyczyscZapis2();
+  wyczyscZapis3();
+  wyczyscZapis4();
+}
+
+function aha1() {
+  klik1koszt = 100;
+  localStorage.klik1koszt = klik1koszt;
+  document.getElementById("wtf1").innerHTML =
+    "Kosztuje " + klik1koszt + " alternatywek";
+  localStorage.setItem("klik1_zapis", klik1koszt);
+}
+
+function aha2() {
+  klik2koszt = 1100;
+  localStorage.klik2koszt = klik2koszt;
+  document.getElementById("wtf2").innerHTML =
+    "Kosztuje " + klik2koszt + " alternatywek";
+  localStorage.setItem("klik2_zapis", klik2koszt);
+}
+
+function aha3() {
+  klik3koszt = 12000;
+  localStorage.klik3koszt = klik3koszt;
+  document.getElementById("wtf3").innerHTML =
+    "Kosztuje " + klik3koszt + " alternatywek";
+  localStorage.setItem("klik3_zapis", klik3koszt);
+}
+
+function aha4() {
+  klik4koszt = 560000;
+  localStorage.klik4koszt = klik4koszt;
+  document.getElementById("wtf4").innerHTML =
+    "Kosztuje " + klik4koszt + " alternatywek";
+  localStorage.setItem("klik4_zapis", klik4koszt);
 }
 
 function wyczyscPosiadne() {
@@ -118,16 +209,31 @@ function wyczyscIlosc() {
   );
 }
 
-if (localStorage.key("posiadane_alternatywki_zapis") < 0) {
-  wyczysc();
-} else {
-  zapisPosiadane();
+function wyczyscZapis1() {
+  klik1koszt = parseInt(localStorage.getItem("klik1_zapis"));
 }
 
-if (localStorage.key("ilosc_na_klikniecie_zapis") < 1) {
+function wyczyscZapis2() {
+  klik2koszt = parseInt(localStorage.getItem("klik2_zapis"));
+}
+
+function wyczyscZapis3() {
+  klik3koszt = parseInt(localStorage.getItem("klik3_zapis"));
+}
+
+function wyczyscZapis4() {
+  klik4koszt = parseInt(localStorage.getItem("klik4_zapis"));
+}
+
+if (localStorage.key("klik1_zapis") < 100) {
   wyczysc();
 } else {
   zapisIlosc();
+  zapisPosiadane();
+  zapisz2();
+  zapisz3();
+  zapisz4();
+  zapisz1();
 }
 
 document.addEventListener("click", function() {
