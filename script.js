@@ -225,7 +225,7 @@ function wyczyscZapis4() {
   klik4koszt = parseInt(localStorage.getItem("klik4_zapis"));
 }
 
-if (localStorage.key("klik1_zapis") < 100) {
+if (localStorage.getItem("klik1_zapis") === null) {
   wyczysc();
 } else {
   zapisIlosc();
