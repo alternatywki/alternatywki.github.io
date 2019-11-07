@@ -1,5 +1,6 @@
 let ilosc_na_klikniecie = 1;
 let posiadane_alternatywki = 0;
+var dzwiek = document.getElementById("elo");
 
 function farma() {
   posiadane_alternatywki = posiadane_alternatywki + ilosc_na_klikniecie;
@@ -127,4 +128,35 @@ if (localStorage.key("ilosc_na_klikniecie_zapis") < 1) {
   wyczysc();
 } else {
   zapisIlosc();
+}
+
+document.addEventListener("click", function() {
+  dzwiek.play();
+});
+
+dzwiek.addEventListener("ended", odtwarzanie);
+
+function odtwarzanie() {
+  var i = Math.floor(Math.random() * 11);
+  dzwiek.src = tablica[i];
+  dzwiek.play();
+  dzwiek.addEventListener("ended", odtwarzanie);
+}
+
+var tablica = [
+  "audio/starshopping.mp3",
+  "audio/save.mp3",
+  "audio/witchblades.mp3",
+  "audio/crybaby.mp3",
+  "audio/rafonix.mp3",
+  "audio/16lines.mp3",
+  "audio/angeldust.mp3",
+  "audio/crash.mp3",
+  "audio/hauntu.mp3",
+  "audio/homealone.mp3",
+  "audio/suckblood.mp3"
+];
+
+function skip() {
+  odtwarzanie();
 }

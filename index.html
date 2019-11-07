@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>alternatywkas clicker</title>
+    <script
+      src="https://kit.fontawesome.com/66c4911048.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <link rel="stylesheet" href="style.css" />
   <link
@@ -12,14 +16,20 @@
     rel="stylesheet"
   />
   <body>
+    <button onclick="skip()" id="skip"><i class="fas fa-forward"></i></button>
+
+    <audio id="elo">
+      <source src="audio/starshopping.mp3" />
+    </audio>
+
     <div id="kontener">
       <div id="alternatywki">
         <div id="ilosc">
           Ilość alternatywek na kliknięcie: 1
         </div>
         <div id="klikanie">
-          <div>Klikaj w szmate</div>
-          <button id="ehe" onclick="farma()">
+          <div class="klikaj">Klikaj w szmate</div>
+          <button id="ehe" onclick="farma();">
             <img src="img/glowa.jpg" width="200px" height="200px" />
           </button>
         </div>
