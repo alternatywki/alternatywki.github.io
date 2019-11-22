@@ -1,153 +1,213 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   outline: none;
-  opacity: 10;
 }
 
-html,
 body {
   background: url("siema.gif") no-repeat;
   background-size: cover;
-  font-family: "Noto Serif", serif;
-  margin: 0;
-  padding: 0;
-}
-
-#kontener {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-#alternatywki {
-  display: flex;
-  width: 100%;
-  height: 300px;
-  flex-direction: row;
-}
-
-#klikanie {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-end;
-  margin: -50px;
-  flex-direction: column;
-  color: darkviolet;
-}
-
-#ilosc {
-  display: flex;
-  width: 100%;
-  font-size: 35px;
-  justify-content: center;
-  margin-top: 40px;
-  color: darkviolet;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-#posiadane {
-  display: flex;
-  width: 100%;
-  font-size: 35px;
-  justify-content: center;
-  margin-top: 40px;
-  color: darkviolet;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-#ehe {
-  margin-top: 10px;
-  border: solid 0px;
-  background-color: transparent;
-}
-
-#ehe1 {
-  display: flex;
-  justify-content: center;
-  border: solid 0px;
-  background-color: transparent;
 }
 
 #sklep {
+  margin-top: 10px;
   display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 350px;
+  flex-wrap: wrap;
+  background-color: lightslategray;
+  width: 75%;
+  border: darkviolet 5px solid;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  z-index: -99999;
+  opacity: 0;
+}
+
+img {
+  width: 200px;
+  border: darkviolet 2px solid;
 }
 
 img:active {
   transform: scale(1.1);
 }
 
-.obrazeczki {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around;
-  width: 100%;
-  height: 100%;
-  margin-top: -40px;
-  z-index: 10;
-}
-
-#napis {
-  background-color: transparent;
-  border-top: 10px solid darkviolet;
-  color: white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  margin-bottom: -300px;
-  margin-top: 200px;
-  z-index: 10;
-  font-size: 40px;
-}
-
-.napis {
+.kupowanie {
   color: darkviolet;
   font-size: 20px;
   font-weight: 1000;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  margin-top: 20px;
+  margin-left: 45px;
+  margin-right: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.napisKosztuje {
+  margin-top: 10px;
+}
+
+#exit {
+  color: darkviolet;
+  position: absolute;
+  font-size: 40px;
+  top: 30px;
+  left: 1620px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 2;
+}
+
+#posiadaneSklep {
+  text-align: center;
+  width: 450px;
+  position: absolute;
+  top: 70%;
+  color: darkviolet;
+  font-size: 40px;
+  font-weight: 1000;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#gora {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: darkviolet;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  width: 100%;
+}
+
+#glowa {
+  width: 350px;
+  border: 3px solid darkviolet;
+}
+
+#klikanie {
+  flex-direction: column;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
+#obokKlikanie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 100px;
+  border: darkviolet 5px solid;
+  border-radius: 10px;
+  background: rgba(100, 100, 100, 0.8);
+  padding-right: 20px;
+  padding-left: 20px;
+  flex: 1;
+}
+
+#container {
+  position: absolute;
+  transform: translate(30%, 40%);
+  z-index: 1;
+}
+
+#containerSklep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#napisKlikanie {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+#ehe {
+  margin-bottom: 100px;
+}
+
+#containerSklep {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 200px;
+  height: 100px;
+  top: 20px;
+  font-size: 40px;
+  left: calc(50% - (250px / 2));
+  background-color: rgba(58, 0, 83, 0.5);
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  z-index: 1;
+}
+
+#prosze {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  color: white;
+}
+
+#prosze2 {
+  background: transparent;
+  border: none;
+  color: darkviolet;
+  font-size: 40px;
 }
 
 #skip {
   position: absolute;
   width: 100px;
   height: 50px;
-  left: calc(50% - 50px);
-  top: 20px;
+  top: -14%;
+  left: 36%;
   border-radius: 20px;
-  border: 1px solid darkviolet;
-  background-color: rgb(203, 218, 230);
+  border: 2px solid darkred;
+  background-color: rgba(58, 0, 83, 0.5);
+  color: darkred;
+  font-size: 25px;
 }
 
-i {
-  font-size: 30px;
-  color: darkviolet;
-}
-
-.klikaj {
-  font-size: 20px;
-  font-weight: 1000;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-img {
-  box-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
-body::after {
-  content: "";
+#pauza {
   position: absolute;
-  width: 100%;
-  height: calc(100% - 500px);
-  top: 500px;
-  left: 0;
-  background: rgba(148, 0, 211, 0.5);
-  z-index: 1;
+  width: 100px;
+  height: 50px;
+  top: -14%;
+  left: 45%;
+  border-radius: 20px;
+  border: 2px solid darkred;
+  background-color: rgba(58, 0, 83, 0.5);
+  color: darkred;
+  font-size: 25px;
+}
+
+#minus {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: -14%;
+  left: 54%;
+  border-radius: 20px;
+  border: 2px solid darkred;
+  background-color: rgba(58, 0, 83, 0.5);
+  color: darkred;
+  font-size: 25px;
+}
+
+#plus {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: -14%;
+  left: 63%;
+  border-radius: 20px;
+  border: 2px solid darkred;
+  background-color: rgba(58, 0, 83, 0.5);
+  color: darkred;
+  font-size: 25px;
 }

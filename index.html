@@ -4,96 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>alternatywkas clicker</title>
-    <script
-      data-ad-client="ca-pub-7426326218624968"
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
+    <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://kit.fontawesome.com/66c4911048.js"
       crossorigin="anonymous"
     ></script>
+    <title>Alternatywkas Clicker</title>
   </head>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
-    rel="stylesheet"
-  />
   <body>
-    <button onclick="skip()" id="skip"><i class="fas fa-forward"></i></button>
-    <audio id="elo">
-      <source src="audio/starshopping.mp3" />
-    </audio>
-
-    <div id="kontener">
-      <div id="alternatywki">
-        <div id="ilosc">
-          Ilość alternatywek na kliknięcie: 1
-        </div>
+    <div id="containerSklep" onclick="jd()">
+      <button id="prosze">Sklep</button>
+    </div>
+    <div id="container">
+      <div id="gora">
         <div id="klikanie">
-          <div class="klikaj">Klikaj w szmate</div>
-          <button id="ehe" onclick="farma();">
-            <img src="img/glowa.jpg" width="200px" height="200px" />
-          </button>
+          <div id="napisKlikanie">Klikaj w szmate</div>
+          <div id="ehe">
+            <img src="img/glowa.jpg" id="glowa" onclick="klikanie()" />
+          </div>
         </div>
-        <div id="posiadane">
-          Posiadane alternatywki: 0
+        <div id="obokKlikanie">
+          <div id="posiadane">Posiadane Alternatywki: 0</div>
+          <div id="naKlikniecie">Alternatywki Na Klikniecie: 1</div>
+          <div id="naSekunde">Alternatywki Na Sekunde: 0</div>
         </div>
       </div>
-      <div id="napis">Sklep Boży</div>
-      <div id="sklep">
-        <div class="obrazeczki">
-          <button id="ehe1" onclick="sklep1()">
-            <img
-              src="img/sklep1.jpg"
-              width="200px"
-              height="200px"
-              class="kupa"
-            />
-          </button>
-          <div class="napis">Dodaje 1 alternatywke na klikniecie</div>
-          <div class="napis" id="wtf1">Kosztuje 100 alternatywek</div>
+      <button onclick="skip()" id="skip">
+        <i class="fas fa-forward" aria-hidden="true"></i>
+      </button>
+      <button onclick="pauza()" id="pauza">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button onclick="minus()" id="minus">
+        <i class="fas fa-minus"></i>
+      </button>
+      <button onclick="plus()" id="plus">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+    <div id="pokrycie"></div>
+    <div id="sklep">
+      <div id="exit">
+        <button onclick="jd2()" id="prosze2">
+          <i class="far fa-times-circle"></i>
+        </button>
+      </div>
+      <div id="posiadaneSklep">Posiadane Alternatywki: 0</div>
+      <div class="kupowanie">
+        <img src="img/sklep1.jpg" id="sklep1" onclick="sklep1()" />
+        <div class="napisKosztuje" id="napisKosztuje1">
+          Kosztuje 50 alternatywek
         </div>
-        <div class="obrazeczki">
-          <button id="ehe1" onclick="sklep2()">
-            <img
-              src="img/sklep2.jpg"
-              width="200px"
-              height="200px"
-              class="kupa"
-            />
-          </button>
-          <div class="napis">Dodaje 8 alternatywek na klikniecie</div>
-          <div class="napis" id="wtf2">Kosztuje 1100 alternatywek</div>
+        <div class="napisDaje" id="napisDaje1">1 klik</div>
+        <div class="napisKupione" id="napisKupione1">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep2.jpg" id="sklep2" onclick="sklep2()" />
+        <div class="napisKosztuje" id="napisKosztuje2">
+          Kosztuje 300 alternatywek
         </div>
-        <div class="obrazeczki">
-          <button id="ehe1" onclick="sklep3()">
-            <img
-              src="img/sklep3.jpg"
-              width="200px"
-              height="200px"
-              class="kupa"
-            />
-          </button>
-          <div class="napis">Dodaje 60 alternatywek na klikniecie</div>
-          <div class="napis" id="wtf3">Kosztuje 12000 alternatywek</div>
+        <div class="napisDaje">1 klik, 2 na sekunde</div>
+        <div class="napisKupione" id="napisKupione2">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep3.jpg" id="sklep3" onclick="sklep3()" />
+        <div class="napisKosztuje" id="napisKosztuje3">
+          Kosztuje 600 alternatywek
         </div>
-        <div class="obrazeczki">
-          <button id="ehe1" onclick="sklep4()">
-            <img
-              src="img/sklep4.jpg"
-              width="200px"
-              height="200px"
-              class="kupa"
-            />
-          </button>
-          <div class="napis">Dodaje 520 alternatywek na klikniecie</div>
-          <div class="napis" id="wtf4">Kosztuje 560000 alternatywek</div>
+        <div class="napisDaje">2 klik, 3 na sekunde</div>
+        <div class="napisKupione" id="napisKupione3">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep4.jpg" id="sklep4" onclick="sklep4()" />
+        <div class="napisKosztuje" id="napisKosztuje4">
+          Kosztuje 2000 alternatywek
         </div>
+        <div class="napisDaje">3 klik, 5 na sekunde</div>
+        <div class="napisKupione" id="napisKupione4">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep5.jpg" id="sklep5" onclick="sklep5()" />
+        <div class="napisKosztuje" id="napisKosztuje5">
+          Kosztuje 4000 alternatywek
+        </div>
+        <div class="napisDaje">4 klik, 7 na sekunde</div>
+        <div class="napisKupione" id="napisKupione5">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep6.jpg" id="sklep6" onclick="sklep6()" />
+        <div class="napisKosztuje" id="napisKosztuje6">
+          Kosztuje 7500 alternatywek
+        </div>
+        <div class="napisDaje">5 klik, 10 na sekunde</div>
+        <div class="napisKupione" id="napisKupione6">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep7.jpg" id="sklep7" onclick="sklep7()" />
+        <div class="napisKosztuje" id="napisKosztuje7">
+          Kosztuje 10000 alternatywek
+        </div>
+        <div class="napisDaje">7 klik, 12 na sekunde</div>
+        <div class="napisKupione" id="napisKupione7">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep8.jpg" id="sklep8" onclick="sklep8()" />
+        <div class="napisKosztuje" id="napisKosztuje8">
+          Kosztuje 20000 alternatywek
+        </div>
+        <div class="napisDaje">9 klik, 15 na sekunde</div>
+        <div class="napisKupione" id="napisKupione8">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep9.jpg" id="sklep9" onclick="sklep9()" />
+        <div class="napisKosztuje" id="napisKosztuje9">
+          Kosztuje 50000 alternatywek
+        </div>
+        <div class="napisDaje">
+          11 klik, 18 na sekunde
+        </div>
+        <div class="napisKupione" id="napisKupione9">Kupionych: 0</div>
+      </div>
+      <div class="kupowanie">
+        <img src="img/sklep10.png" id="sklep10" onclick="sklep10()" />
+        <div class="napisKosztuje" id="napisKosztuje10">
+          Kosztuje 200000 alternatywek
+        </div>
+        <div class="napisDaje">
+          15 klik, 25 na sekunde
+        </div>
+        <div class="napisKupione" id="napisKupione10">Kupionych: 0</div>
       </div>
     </div>
   </body>
 </html>
 <script src="script.js"></script>
-xd
+<script src="muzyka.js"></script>
